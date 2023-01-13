@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modestro flowers</title>
+    <link rel="stylesheet" href="./style/main.css">
+</head>
+<body>
+    <div class="background background__main">
+        <header class="header container">
+            <img class="header__logo" src="./assets/img/logo.png" alt="header-logo">
+            <div class="header__menu">
+                <a class="header__menu_link" href="#">Магазины</a>
+                <a class="header__menu_link" href="#">Контакты</a>
+                <a class="header__menu_link" href="#">О нас</a>
+            </div>
+            <div class="header__buttons">
+                <button
+                    class="header__buttons_button header__buttons_tell"
+                >+3 67 8754 7894</button>
+                <div class="header__buttons_container">
+                    <button
+                        class="header__buttons_lang header__buttons_lang-active"
+                    >Ru</button>
+                    <button
+                        class="header__buttons_lang"
+                    >Eng</button>
+                </div>
+                <button
+                    class="header__buttons_button header__buttons_enter"
+                >Войти</button>
+                <button
+                    class="header__buttons_button header__buttons_registr"
+                >Создать аккаунт</button>
+                <button
+                    class="header__buttons_button header__buttons_menu"
+                >
+                    <svg class="icon">
+                        <use xlink:href="./assets/svg/sprite.svg#menu"></use>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <section class="mainSlide container">
+            <h2 class="mainSlide__heading">Мы будем рады сотрудничать с вами на платформе 'Международной цветочной онлайн-площадки'!</h2>
+            <p class="mainSlide__text">Присоединяйтесь к нам и начните получать доход с бизнеса в первый месяц регистрации! </p>
+            <div class="mainSlide__buttons">
+                <button
+                    class="mainSlide__buttons_buy mainSlide__buttons_button"
+                >Начать покупать</button>
+                <button
+                    class="mainSlide__buttons_sell mainSlide__buttons_button"
+                >Начать продавать</button>
+            </div>
+        </section>
+    </div>
+    <div class="background background__form">
+        <section class="formSlide container">
+            <div class="formSlide__content">
+                <h2 class="formSlide__content_h2">Заполните форму и начните развивать свой бизнес прямо сейчас!</h2>
+                <p class="formSlide__content_p">Регистрация на нашем сайте занимает несколько минут, просим ответить на все вопросы полностью и корректно! После подтверждения регистрации вы попадёте в систему, где большинство процессов автоматизированы, что сэкономит ваше время и деньги!</p>
+            </div>
+            <form class="formSlide__form" action="">
+                <div class="formSlide__form_container">
+                    <label class="formSlide__form_label" for="form-name">Ваше имя</label>
+                    <input class="formSlide__form_input" id='form-name' type="text" placeholder="Фролова Александра Васильевна" required>
+                </div>
+                
+                <div class="formSlide__form_container">
+                    <label class="formSlide__form_label" for="form-company-name">Название Компании</label>
+                    <input class="formSlide__form_input" id='form-company-name' type="text" placeholder="ООО Атлантика" required>
+                </div>
+
+                <div class="formSlide__form_container">
+                    <label class="formSlide__form_label" for="form-email">E-mail</label>
+                    <input class="formSlide__form_input" id='form-email' type="email" placeholder="flolovaalexa@com.rur" required>
+                </div>
+
+                <div class="formSlide__form_container">
+                    <label class="formSlide__form_label" for="form-tel">Номер телефона</label>
+                    <input class="formSlide__form_input" id='form-tel' type="tel" placeholder="+7 (XXX) - XXX XX XX" required>
+                </div>
+
+                <div class="formSlide__form_container">
+                    <label class="formSlide__form_label" for="form-promocode">Промокод</label>
+                    <input class="formSlide__form_input" id='form-promocode' type="text" placeholder="HGF864">
+                </div>
+                
+                <div class="formSlide__form_container">
+                    <input class="formSlide__form_btn" type="submit" value="Далее">
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__address">
+                <p class="footer__heading">Наши офисы</p>
+                <div class="footer__address_container">
+                    <p class="footer__address_p">
+                        Московский офис <br>
+                        +7 455 267-89-07<br>
+                        Берсеневский пер., д. 56, стр. 4,<br>
+                        6-й эт., Москва, 567754<br>
+                    </p>
+                    <p class="footer__address_p">
+                        Ростовский офис<br>
+                        +7 878 888-01-67<br>
+                        Буденовский пр-т, д. 84, 6-й эт.,<br>
+                        Ростов-на-Дону, 679965<br>
+                    </p>
+                </div>
+            </div>
+            <div class="footer__social">
+                <p class="footer__heading">Мы в соц сетях</p>
+                <a class='footer__social_link' href="#">Instagram</a>
+                <a class='footer__social_link' href="#">Facebook</a>
+            </div>
+            <div class="footer__connection">
+                <p class="footer__heading">Свяжитесь с нами</p>
+                <p class="footer__connection_tel">+3 67 8754 7894</p>
+                <p class="footer__connection_email">mflowers@flo.com</p>
+                <button class="footer__connection_btn">
+                    Написать
+                    <svg class="icon">
+                        <use xlink:href="./assets/svg/sprite.svg#message"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="footer__copy">
+                <small>Авторские права 2008-2022 M-flowers.com</small>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

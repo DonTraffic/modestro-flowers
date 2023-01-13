@@ -1,0 +1,595 @@
+@import url('https://fonts.googleapis.com/css2?family=Marmelad&family=Raleway:wght@300;400;500;600&family=Roboto:wght@500&display=swap');
+
+@import 'media.scss';
+
+$color-back: #FFFBED;
+$color-text: #372E11;
+
+$color-yell: #FFE182;
+
+$max-width: 1420px;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    color: $color-text;
+    font-weight: 500;
+    font-size: 20px;
+
+    a{
+        text-decoration: none;
+    }
+}
+
+body{
+    max-width: 100vw;
+    min-height: 100vh;
+    background-color: $color-back;
+}
+
+.container{
+    max-width: $max-width;
+    margin: 0 auto;
+
+}
+
+.background{
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+
+    &__main{
+        background-image: url('../assets/img/background-main.png');
+        height: 100vh;
+        background-size: cover;
+
+        @include tablet{
+            background-image: url('../assets/img/background-main-tabl.png');
+            background-position-y: 120px;
+        }
+
+        @include tablet{
+            background-image: url('../assets/img/background-main-phone.png');
+            background-position-y: bottom;
+        }
+
+    }
+
+    &__form{
+        background-image: url('../assets/img/background-form.png');
+        padding: 200px 0;
+        background-size: cover;
+        
+        @include laptopL{
+            padding: 40px;
+        }
+
+        @include phone{
+            padding: 20px;
+        }
+
+    }
+
+}
+
+
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include laptopL{
+        padding: 0 20px;
+    }
+
+    @include tablet{
+        padding: 20px;
+    }
+
+    @include phone{
+        padding: 8px 20px;
+    }
+
+    &__logo{
+        height: 98px;
+        width: 98px;
+
+        @include phone{
+            height: 42px;
+            width: 48px;
+        }
+
+    }
+
+    &__menu{
+        display: flex;
+        gap: 40px;
+
+        @include tablet{
+            display: none;
+        }
+
+        &_link{
+            font-size: 18px;
+            line-height: 21px;
+        }
+
+    }
+
+    &__buttons{
+        display: flex;
+        align-items: center;
+
+        @include tablet{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        &_button{
+            font-size: 18px;
+            line-height: 21px;
+            padding: 14px 30px;
+
+            @include tablet{
+                font-weight: 500;
+                font-size: 16px;
+            }
+
+            &:hover{
+                cursor: pointer;
+            }
+
+        }
+
+        &_container{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        &_tell{
+            line-height: 23px;
+            padding: 16px 30px;
+            margin-right: 20px;
+            font-family: 'Roboto', sans-serif;
+
+            @include tablet{
+                margin: 0;
+            }
+
+            @include phone{
+                padding: 8px;
+            }
+
+        }
+
+        &_enter{
+            @include phone{
+                display: none;
+            }
+        }
+
+        &_registr{
+            border: 1px solid #000000;
+            border-radius: 12px;
+            margin-left: 10px;
+
+            @include tablet{
+                display: none;
+            }
+
+        }
+
+        &_lang{
+            color: #9B9B99;
+            display: none;
+
+            @include tablet{
+                display: block;
+            }
+
+            @include tablet{
+                font-weight: 500;
+                font-size: 16px;
+            }
+
+            &-active{
+                color: #372E11;
+            }
+
+        }
+
+        &_menu{
+            display: none;
+            padding: 0;
+
+            @include tablet{
+                display: block;
+            }
+
+            .icon{
+                height: 40px;
+                width: 40px;
+
+                @include tablet{
+                    height: 30px;
+                    width: 30px;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+.mainSlide{
+    padding: 166px 0 0 0;
+    max-width: 887px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet{
+        padding: 60px 20px 0 20px;
+    }
+
+    @include phone{
+        padding: 94px 20px 0 20px;
+    }
+
+    &__heading{
+        font-family: 'Marmelad', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 56px;
+        line-height: 67px;
+        text-align: center;
+        margin-bottom: 40px;
+
+        @include phone{
+            font-weight: 400;
+            font-size: 24px;
+            margin-bottom: 24px;
+            line-height: 28.58px;
+        }
+
+    }
+
+    &__text{
+        font-weight: 300;
+        font-size: 26px;
+        line-height: 31px;
+        text-align: center;
+        max-width: 700px;
+        margin-bottom: 58px;
+
+        @include phone{
+            font-weight: 300;
+            font-size: 16px;
+            margin-bottom: 24px;
+            line-height: 18.78px;
+        }
+
+    }
+
+    &__buttons{
+        display: flex;
+        gap: 20px;
+
+        @include phone{
+            gap: 8px;
+        }
+        
+        &_buy{
+            padding: 22px 34px;
+            background: $color-yell;
+        }
+
+        &_sell{
+            padding: 24px 34px;
+            background: #EDEDED;
+        }
+
+        &_button{
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 21px;
+
+            @include phone{
+                padding: 12px 10px;
+                font-weight: 600;
+                font-size: 16px;
+            }
+
+            &:hover{
+                cursor: pointer;
+            }
+
+        }
+
+        
+    }
+}
+
+.formSlide{
+    display: grid;
+    grid-template-columns: minmax(0, 580px) minmax(0, 320px);
+    gap: 80px;
+    max-width: 1140px;
+    padding: 80px;
+    background-image: url('./../assets/img/background-form2jpg.jpg');
+    background-size: cover;
+
+    @include tablet{
+        background-image: none;
+        background-color: rgba(255, 251, 237, 1);
+        grid-template-columns: 1fr;
+        padding: 32px;
+        gap: 58px;
+    }
+
+    @include phone{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 32px;
+    }
+
+    &__content{
+        &_h2{
+            font-family: 'Marmelad';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 36px;
+            line-height: 43px;
+            margin-bottom: 40px;
+
+            @include phone{
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 29px;
+                margin-bottom: 32px;
+            }
+
+        }
+
+        &_p{
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 21px;
+
+            @include phone{
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+            }
+
+        }
+
+    }
+
+    &__form{
+        @include tablet{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-auto-flow: column;
+            gap: 20px 40px;
+        }
+
+        @include phone{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &_label{
+            width: 100%;
+            font-size: 14px;
+            line-height: 16px;
+            display: flex;
+            align-items: center;
+
+        }
+
+        &_input{
+            width: 100%;
+            padding: 16px 8px;
+            background: #FFF8E1;
+            border-radius: 6px;
+            margin: 10px 0 20px 0;
+
+            font-size: 14px;
+            line-height: 16px;
+
+            color: #8E825C;
+
+        }
+
+        &_btn{
+            margin-top: 20px;
+            width: 100%;
+            background: $color-yell;
+            border-radius: 12px;
+            padding: 16px 0;
+
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+
+            @include phone{
+                margin-top: 20px;
+            }
+
+        }
+
+    }
+
+}
+
+.footer{
+    padding: 80px 0;
+    background: $color-text;
+
+    @include laptopL{
+        padding: 80px 24px;
+    }
+
+    @include tablet{
+        padding: 32px 24px;
+    }
+
+    @include phone{
+        padding: 32px 20px;
+    }
+
+    *{
+        color: #FFFBED;
+    }
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @include laptop{
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 48px 24px;
+            grid-template-areas: 
+                "footer__address footer__connection"
+                "footer__social ."
+                "footer__copy ."; 
+
+        }
+
+        @include phone{
+            display: flex;
+            flex-direction: column;
+        }
+
+    }
+    
+    &__heading{
+        font-family: 'Marmelad';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 24px;
+    }
+
+    &__address{
+        grid-area: footer__address;
+
+        &_container{
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 40px;
+
+            @include laptop{
+                grid-template-columns: auto;
+                gap: 16px;
+            }
+
+        }
+
+        &_p{
+            font-size: 18px;
+            line-height: 21px;
+        }
+
+    }
+
+    &__social{
+        grid-area: footer__social;
+
+        &_link{
+            display: block;
+            line-height: 23px;
+            margin-top: 16px;
+
+        }
+
+    }
+
+    &__connection{
+        grid-area: footer__connection;
+        display: flex;
+        flex-direction: column;
+
+        @include laptop{
+            max-width: 247px;
+            justify-self: end;
+        }
+
+        &_tel{
+            font-family: 'Roboto';
+            font-style: normal;
+            line-height: 23px;
+            margin-bottom: 16px;
+        }
+
+        &_email{
+            font-family: 'Raleway';
+            font-style: normal;
+            line-height: 23px;
+            margin-bottom: 16px;
+        }
+
+        &_btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 12px 32px;
+
+            background: $color-yell;
+            border-radius: 12px;
+
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+
+            color: $color-text;
+
+            .icon{
+                height: 24px;
+                width: 24px;
+                margin-left: 10px;
+            }
+
+        }
+
+    }
+
+    &__copy{
+        grid-area: footer__copy;
+        display: none;
+
+        @include laptop{
+            display: block;
+        }
+
+        small{
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            color: #B9B3B3;
+        }
+
+    }
+
+}
+
